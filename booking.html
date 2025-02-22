@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaner Uppers</title>
+    <link rel="icon" type="image/x-icon" href="stuff.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 3rem;
+            animation: slideIn 1.5s ease-in-out;
+            font-family: 'Brush Script MT', cursive;
+        }
+        nav {
+            background-color: #2c2c2c;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1rem;
+            transition: transform 0.5s ease-in-out, color 0.3s ease, background-color 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            color: #ffcc00;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .hero {
+            background: url('cleaning-service-background.jpg') no-repeat center center/cover;
+            color: black;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+        }
+        .cta-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .cta-button {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e6b800;
+            transform: scale(1.1);
+        }
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cleaner Uppers</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section class="hero">
+        <h2>Reliable Cleaning Services 24/7</h2>
+        <p>Book your cleaning appointment now and enjoy a spotless home!</p>
+        <div class="cta-container">
+            <button class="cta-button" onclick="toggleContactInfo()">Book Now</button>
+        </div>
+        <div class="contact-info" id="contact-info" style="display: none;">
+            <p>Sorry, you can't book online. Please contact us via email or phone call:</p>
+            <p><b>Email:</b> cleaners@gmail.com</p>
+            <p><b>Phone:</b> 0482382874</p>
+        </div>
+    </section>
+    <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="2vdFsIfS13Js08rK6pfYJ";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+        </script>
+    
+        <footer>
+            &copy; THE TEAM OF THE CLEANER UPPERS.
+            <div>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+
+    <script>
+        function toggleContactInfo() {
+            var contactInfo = document.getElementById('contact-info');
+            if (contactInfo.style.display === 'none') {
+                contactInfo.style.display = 'block';
+            } else {
+                contactInfo.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
